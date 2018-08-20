@@ -13,6 +13,9 @@ var Datastore = require('nedb')
 
 var server = app.listen(process.env.PORT || 8080, function () {
   var port = server.address().port;
+	/*db.remove({}, { multi: true }, function (err, numRemoved) {
+		console.log(numRemoved);
+	});*/
   console.log("App now running on port", port);
 });
 
