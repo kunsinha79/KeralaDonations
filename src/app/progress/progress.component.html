@@ -1,0 +1,30 @@
+
+
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">Summary</div>
+        <ul class="list-group">
+            <li class="list-group-item">
+              <div>
+                <span>Target</span><span class="pull-right">{{summary.totalNeeded}} EUR</span>
+              </div>
+            </li>
+            <li class="list-group-item">
+                <div>
+                  <span>Raised</span><span class="pull-right">{{summary.totalRaised}} EUR</span>
+                </div>
+              </li>
+              <li class="list-group-item">
+                  <div>
+                    <span>Supporters</span><span class="pull-right">{{summary.count}}</span>
+                  </div>
+                </li>
+          </ul>
+          <div class="progress">
+              <div class="progress-bar" role="progressbar" [style.width.%]="summary.percentage">
+                {{summary.percentage}}%
+              </div>
+            </div>
+  </div>
+

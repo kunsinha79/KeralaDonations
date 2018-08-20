@@ -1,0 +1,50 @@
+
+
+<div class="panel panel-default">
+  <div class="panel-heading">Did you already contribute ? Let us know below details</div>
+  <div class="panel-body">
+
+      <div class="alert alert-success" [hidden]="!showStatus" role="alert">Thanks for your contribution!</div>
+
+      <form [formGroup]="userForm">
+
+          <div class="form-group">
+
+              <label for="exampleInputPassword1">Name *</label>
+
+              <input type="text" class="form-control" placeholder="Well Wisher" formControlName="name">
+
+            </div>
+
+          <div class="form-group">
+
+            <label for="exampleInputEmail1">Email address *</label>
+
+            <input type="email" class="form-control" placeholder="Email" formControlName="email">
+
+          </div>
+
+          <div class="form-group">
+
+              <label for="exampleInputEmail1">Your Contribution *</label>
+
+              <div class="input-group">
+
+                  <span class="input-group-addon">€</span>
+
+                  <input type="number" min = "1" max = "999" class="form-control" aria-label="Amount (to the nearest dollar)" formControlName="amount">
+
+                  <span class="input-group-addon">.00</span>
+
+                </div>
+
+     
+
+          </div>
+          <button (click)="onSubmit()" [disabled]="!userForm.valid" type="submit" class="btn btn-default">Submit</button>
+
+        </form>
+
+  </div>
+
+</div>
